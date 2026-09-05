@@ -1,0 +1,41 @@
+import random
+
+print("Welcome to the Math Challenge Game!")
+print("You will get 5 questions.")
+print("Each correct answer gives you 1 point.")
+print()
+
+score = 0
+
+for question in range(1, 6):
+
+    num1 = random.randint(1, 20)
+    num2 = random.randint(1, 20)
+
+    print("Question", question)
+    print("What is", num1, "+", num2, "?")
+
+    answer = int(input("Enter your answer: "))
+
+    correct_answer = num1 + num2
+
+    if answer == correct_answer:
+        print("Correct!")
+        score += 1
+    else:
+        print("Wrong!")
+        print("The correct answer is:", correct_answer)
+
+    print()
+
+print("Game Over!")
+print("Your final score is:", score, "out of 5")
+
+if score == 5:
+    print("Excellent! You got all answers correct.")
+
+elif score >= 3:
+    print("Good job!")
+
+else:
+    print("Keep practising!")
